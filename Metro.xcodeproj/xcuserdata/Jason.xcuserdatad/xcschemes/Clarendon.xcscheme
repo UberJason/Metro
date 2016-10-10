@@ -67,16 +67,33 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.springboard">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "96E996AB1DA9EABB00D48316"
-            BuildableName = "Metro.app"
-            BlueprintName = "Metro"
+            BlueprintIdentifier = "96E996C41DA9ED1E00D48316"
+            BuildableName = "Clarendon.appex"
+            BlueprintName = "Clarendon"
             ReferencedContainer = "container:Metro.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "96E996C41DA9ED1E00D48316"
+            BuildableName = "Clarendon.appex"
+            BlueprintName = "Clarendon"
+            ReferencedContainer = "container:Metro.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "disable"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
