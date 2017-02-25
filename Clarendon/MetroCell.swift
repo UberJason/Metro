@@ -8,18 +8,20 @@
 
 import UIKit
 
-class MetroCell: UITableViewCell {
+public class MetroCell: UITableViewCell {
 
-    @IBOutlet weak var lineView: UIView!
-    @IBOutlet weak var destinationLabel: UILabel!
-    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet public weak var lineView: UIView!
+    @IBOutlet public weak var destinationLabel: UILabel!
+    @IBOutlet public weak var statusLabel: UILabel!
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        lineView.layer.cornerRadius = lineView.frame.size.width/2
+        lineView.layer.masksToBounds = true
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    override public func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state

@@ -12,10 +12,8 @@
 		961C4F451E62247500474F1C /* MetroKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 961C4F3D1E62247500474F1C /* MetroKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		961C4F4B1E62248200474F1C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C4F4A1E62248200474F1C /* Model.swift */; };
 		961C4F4C1E62256300474F1C /* MetroKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961C4F3D1E62247500474F1C /* MetroKit.framework */; };
-		9642D7F91DAAF37D00176CD7 /* MetroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9642D7F81DAAF37D00176CD7 /* MetroCell.swift */; };
-		9642D7FA1DAAF37D00176CD7 /* MetroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9642D7F81DAAF37D00176CD7 /* MetroCell.swift */; };
-		9642D7FC1DAAF39000176CD7 /* MetroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9642D7FB1DAAF39000176CD7 /* MetroCell.xib */; };
-		9642D7FD1DAAF39000176CD7 /* MetroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9642D7FB1DAAF39000176CD7 /* MetroCell.xib */; };
+		961C4F4D1E62316500474F1C /* MetroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9642D7F81DAAF37D00176CD7 /* MetroCell.swift */; };
+		961C4F4E1E62316500474F1C /* MetroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9642D7FB1DAAF39000176CD7 /* MetroCell.xib */; };
 		96E996B01DA9EABB00D48316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E996AF1DA9EABB00D48316 /* AppDelegate.swift */; };
 		96E996B21DA9EABB00D48316 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E996B11DA9EABB00D48316 /* ViewController.swift */; };
 		96E996B51DA9EABC00D48316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E996B31DA9EABB00D48316 /* Main.storyboard */; };
@@ -74,8 +72,8 @@
 		961C4F3F1E62247500474F1C /* MetroKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetroKit.h; sourceTree = "<group>"; };
 		961C4F401E62247500474F1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		961C4F4A1E62248200474F1C /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		9642D7F81DAAF37D00176CD7 /* MetroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetroCell.swift; sourceTree = "<group>"; };
-		9642D7FB1DAAF39000176CD7 /* MetroCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MetroCell.xib; sourceTree = "<group>"; };
+		9642D7F81DAAF37D00176CD7 /* MetroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetroCell.swift; path = ../Clarendon/MetroCell.swift; sourceTree = "<group>"; };
+		9642D7FB1DAAF39000176CD7 /* MetroCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MetroCell.xib; path = ../Clarendon/MetroCell.xib; sourceTree = "<group>"; };
 		96E996AC1DA9EABB00D48316 /* Metro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E996AF1DA9EABB00D48316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96E996B11DA9EABB00D48316 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +122,8 @@
 				961C4F3F1E62247500474F1C /* MetroKit.h */,
 				961C4F401E62247500474F1C /* Info.plist */,
 				961C4F4A1E62248200474F1C /* Model.swift */,
+				9642D7F81DAAF37D00176CD7 /* MetroCell.swift */,
+				9642D7FB1DAAF39000176CD7 /* MetroCell.xib */,
 			);
 			path = MetroKit;
 			sourceTree = "<group>";
@@ -174,9 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				96E996CA1DA9ED1E00D48316 /* TodayViewController.swift */,
-				9642D7F81DAAF37D00176CD7 /* MetroCell.swift */,
 				96E996CC1DA9ED1E00D48316 /* MainInterface.storyboard */,
-				9642D7FB1DAAF39000176CD7 /* MetroCell.xib */,
 				96E996CF1DA9ED1E00D48316 /* Info.plist */,
 			);
 			path = Clarendon;
@@ -305,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				961C4F4E1E62316500474F1C /* MetroCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +312,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				96E996BA1DA9EABC00D48316 /* LaunchScreen.storyboard in Resources */,
-				9642D7FC1DAAF39000176CD7 /* MetroCell.xib in Resources */,
 				96E996B71DA9EABC00D48316 /* Assets.xcassets in Resources */,
 				96E996B51DA9EABC00D48316 /* Main.storyboard in Resources */,
 			);
@@ -324,7 +322,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				96E996CE1DA9ED1E00D48316 /* MainInterface.storyboard in Resources */,
-				9642D7FD1DAAF39000176CD7 /* MetroCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				961C4F4B1E62248200474F1C /* Model.swift in Sources */,
+				961C4F4D1E62316500474F1C /* MetroCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +343,6 @@
 			files = (
 				96E996B21DA9EABB00D48316 /* ViewController.swift in Sources */,
 				96E996B01DA9EABB00D48316 /* AppDelegate.swift in Sources */,
-				9642D7F91DAAF37D00176CD7 /* MetroCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +351,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				96E996CB1DA9ED1E00D48316 /* TodayViewController.swift in Sources */,
-				9642D7FA1DAAF37D00176CD7 /* MetroCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,11 +9,45 @@
 import Foundation
 
 public enum Station: String {
-    case clarendon = "Clarendon", wiehle = "Wiehle"
-    var code: String {
+    case clarendon = "Clarendon",
+    wiehle = "Wiehle",
+    largo = "Largo",
+    westFalls = "West Falls Church",
+    newCarrollton = "New Carrollton"
+    
+    public var code: String {
         switch self {
         case .clarendon: return "K02"
         case .wiehle: return "N06"
+        case .largo: return "G05"
+        case .westFalls: return "K06"
+        case .newCarrollton: return "D13"
+        }
+    }
+    public init?(index: Int) {
+        switch index {
+        case 0: self = .clarendon
+        case 1: self = .wiehle
+        default: return nil
+        }
+    }
+    public init?(code: String) {
+        switch code {
+        case "K02": self = .clarendon
+        case "N06": self = .wiehle
+        case "G05": self = .largo
+        case "K06": self = .westFalls
+        case "D13": self = .newCarrollton
+        default: return nil
+        }
+    }
+    public var destinationName: String {
+        switch self {
+        case .clarendon: return "Clarendon"
+        case .wiehle: return "Wiehle Reston-East"
+        case .largo: return "Largo Town Center"
+        case .westFalls: return "West Falls Church"
+        case .newCarrollton: return "New Carrollton"
         }
     }
 }
@@ -28,19 +62,19 @@ public enum TrainLine: String {
         }
     }
 }
-
-public enum Destination: String {
-    case wiehle = "Wiehle", largo = "Largo", westFalls = "W Fls Ch", newCarrollton = "NewCrltn"
-    
-    public func destinationName() -> String {
-        switch self {
-        case .wiehle: return "Wiehle Reston-East"
-        case .largo: return "Largo Town Center"
-        case .westFalls: return "West Falls Church"
-        case .newCarrollton: return "New Carrollton"
-        }
-    }
-}
+//
+//public enum Destination: String {
+//    case wiehle = "Wiehle", largo = "Largo", westFalls = "W Fls Ch", newCarrollton = "NewCrltn"
+//    
+//    public func destinationName() -> String {
+//        switch self {
+//        case .wiehle: return "Wiehle Reston-East"
+//        case .largo: return "Largo Town Center"
+//        case .westFalls: return "West Falls Church"
+//        case .newCarrollton: return "New Carrollton"
+//        }
+//    }
+//}
 
 public enum Status {
     case away(Int)
@@ -72,25 +106,25 @@ public enum Status {
 }
 
 public class Prediction {
-    public var destination: Destination
+    public var destination: Station
     public var line: TrainLine
     public var status: Status
     
-    public init(destination: Destination, line: TrainLine, status: Status) {
+    public init(destination: Station, line: TrainLine, status: Status) {
         self.destination = destination
         self.line = line
         self.status = status
     }
     
     convenience init?(dictionary: [String:Any]) {
-        guard let dest = dictionary["Destination"] as? String,
+        guard let dest = dictionary["DestinationCode"] as? String,
             let lineString = dictionary["Line"] as? String,
             let minutes = dictionary["Min"] as? String
             else {
                 print("Error with that dictionary"); return nil
         }
         
-        let destination = Destination(rawValue: dest)
+        let destination = Station(code: dest)
         let line = TrainLine(rawValue: lineString)
         let status = Status(string: minutes)
         
@@ -104,8 +138,9 @@ public class Prediction {
 }
 
 public class Fetcher {
-    public static func fetchWiehleLines(completion: @escaping (_ predictions: [Prediction]?) -> ()) {
-        let url = URL(string: "https://api.wmata.com/StationPrediction.svc/json/GetPrediction/K02")!
+    public static func fetchLines(for station: Station, completion: @escaping (_ predictions: [Prediction]?) -> ()) {
+        let code = station.code
+        let url = URL(string: "https://api.wmata.com/StationPrediction.svc/json/GetPrediction/\(code)")!
         var request = URLRequest(url: url)
         request.setValue("198e27cd2440473a9d36c0bd3b08e41b", forHTTPHeaderField:"api_key")
         
@@ -129,4 +164,5 @@ public class Fetcher {
         }
         task.resume()
     }
+    
 }

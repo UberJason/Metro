@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,16 +18,18 @@
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6TI-Ui-nGs" userLabel="Divider">
+                                <rect key="frame" x="0.0" y="220" width="320" height="0.5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="2YQ-qT-x2t"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cl6-oZ-TkC">
+                                <rect key="frame" x="0.0" y="36" width="320" height="184"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="M4Y-Lb-cyx" id="L0E-gr-fiq"/>
@@ -32,14 +37,27 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Updated:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdK-Ry-SYt">
+                                <rect key="frame" x="16" y="224.5" width="97" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V38-hZ-Ohr">
+                                <rect key="frame" x="83" y="8" width="155" height="29"/>
+                                <segments>
+                                    <segment title="Clarendon"/>
+                                    <segment title="Wiehle"/>
+                                </segments>
+                                <connections>
+                                    <action selector="stationChanged:" destination="M4Y-Lb-cyx" eventType="valueChanged" id="Kua-o4-IgO"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <constraints>
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="cl6-oZ-TkC" secondAttribute="bottom" constant="30" id="1Am-yC-1kQ"/>
-                            <constraint firstItem="cl6-oZ-TkC" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="LSc-OP-NwK"/>
+                            <constraint firstItem="V38-hZ-Ohr" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="5Q0-Br-h8b"/>
+                            <constraint firstItem="V38-hZ-Ohr" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="A8U-Wy-FEo"/>
+                            <constraint firstItem="cl6-oZ-TkC" firstAttribute="top" secondItem="V38-hZ-Ohr" secondAttribute="bottom" id="Me4-pD-P8y"/>
                             <constraint firstItem="cl6-oZ-TkC" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="U0Z-M0-ZbZ"/>
                             <constraint firstItem="6TI-Ui-nGs" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="Vbg-7z-4hw"/>
                             <constraint firstAttribute="trailing" secondItem="6TI-Ui-nGs" secondAttribute="trailing" id="WMi-DV-VUd"/>
@@ -54,9 +72,10 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="200"/>
+                    <size key="freeformSize" width="320" height="250"/>
                     <connections>
                         <outlet property="lastUpdatedLabel" destination="MdK-Ry-SYt" id="kMo-OE-vvw"/>
+                        <outlet property="segmentedControl" destination="V38-hZ-Ohr" id="Q6G-E9-WP4"/>
                         <outlet property="tableView" destination="cl6-oZ-TkC" id="dF7-yq-RZN"/>
                     </connections>
                 </viewController>
