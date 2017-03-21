@@ -23,7 +23,7 @@ public class MetroCell: UITableViewCell {
 
     public func configure(with prediction: Prediction) {
         lineView.backgroundColor = prediction.line.lineColor
-        destinationLabel.text = prediction.destination.destinationName
+        destinationLabel.text = prediction.destination.rawValue
         statusLabel.text = prediction.status.displayString
     }
 }

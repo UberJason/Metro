@@ -124,8 +124,8 @@
 				961C4F3F1E62247500474F1C /* MetroKit.h */,
 				961C4F401E62247500474F1C /* Info.plist */,
 				961C4F4A1E62248200474F1C /* Model.swift */,
-				9642D7F81DAAF37D00176CD7 /* MetroCell.swift */,
 				9666533E1E80C0AC006A8821 /* MetroDataSource.swift */,
+				9642D7F81DAAF37D00176CD7 /* MetroCell.swift */,
 				9642D7FB1DAAF39000176CD7 /* MetroCell.xib */,
 			);
 			path = MetroKit;
@@ -135,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				96E996AE1DA9EABB00D48316 /* Metro */,
-				96E996C91DA9ED1E00D48316 /* Clarendon */,
+				96E996C91DA9ED1E00D48316 /* Metro Widget */,
 				961C4F3E1E62247500474F1C /* MetroKit */,
 				96E996C61DA9ED1E00D48316 /* Frameworks */,
 				96E996AD1DA9EABB00D48316 /* Products */,
@@ -173,13 +173,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		96E996C91DA9ED1E00D48316 /* Clarendon */ = {
+		96E996C91DA9ED1E00D48316 /* Metro Widget */ = {
 			isa = PBXGroup;
 			children = (
 				96E996CA1DA9ED1E00D48316 /* TodayViewController.swift */,
 				96E996CC1DA9ED1E00D48316 /* MainInterface.storyboard */,
 				96E996CF1DA9ED1E00D48316 /* Info.plist */,
 			);
+			name = "Metro Widget";
 			path = Clarendon;
 			sourceTree = "<group>";
 		};

@@ -10,8 +10,8 @@ import Foundation
 
 public enum Station: String {
     case clarendon = "Clarendon",
-    wiehle = "Wiehle",
-    largo = "Largo",
+    wiehle = "Wiehle Reston-East",
+    largo = "Largo Town Center",
     westFalls = "West Falls Church",
     newCarrollton = "New Carrollton",
     vienna = "Vienna/Fairfax-GMU"
@@ -42,16 +42,6 @@ public enum Station: String {
         case "D13": self = .newCarrollton
         case "K08": self = .vienna
         default: return nil
-        }
-    }
-    public var destinationName: String {
-        switch self {
-        case .clarendon: return "Clarendon"
-        case .wiehle: return "Wiehle Reston-East"
-        case .largo: return "Largo Town Center"
-        case .westFalls: return "West Falls Church"
-        case .newCarrollton: return "New Carrollton"
-        case .vienna: return "Vienna/Fairfax-GMU"
         }
     }
 }
