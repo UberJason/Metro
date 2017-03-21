@@ -73,7 +73,7 @@ extension TodayViewController: NCWidgetProviding {
             preferredContentSize = maxSize
         }
         else {
-            let size = CGSize(width: tableView.contentSize.width, height: tableView.contentSize.height + 80.0)
+            let size = CGSize(width: tableView.contentSize.width, height: 120.0)
             preferredContentSize = size
         }
     }   
