@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "96E996C41DA9ED1E00D48316"
-               BuildableName = "Clarendon.appex"
-               BlueprintName = "Clarendon"
+               BuildableName = "MetroWidget.appex"
+               BlueprintName = "MetroWidget"
                ReferencedContainer = "container:Metro.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,8 +48,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "96E996C41DA9ED1E00D48316"
-            BuildableName = "Clarendon.appex"
-            BlueprintName = "Clarendon"
+            BuildableName = "MetroWidget.appex"
+            BlueprintName = "MetroWidget"
             ReferencedContainer = "container:Metro.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -73,8 +73,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "96E996C41DA9ED1E00D48316"
-            BuildableName = "Clarendon.appex"
-            BlueprintName = "Clarendon"
+            BuildableName = "MetroWidget.appex"
+            BlueprintName = "MetroWidget"
             ReferencedContainer = "container:Metro.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
@@ -82,8 +82,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "96E996C41DA9ED1E00D48316"
-            BuildableName = "Clarendon.appex"
-            BlueprintName = "Clarendon"
+            BuildableName = "MetroWidget.appex"
+            BlueprintName = "MetroWidget"
             ReferencedContainer = "container:Metro.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

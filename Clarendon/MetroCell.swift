@@ -21,10 +21,9 @@ public class MetroCell: UITableViewCell {
         lineView.layer.masksToBounds = true
     }
 
-    override public func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    public func configure(with prediction: Prediction) {
+        lineView.backgroundColor = prediction.line.lineColor
+        destinationLabel.text = prediction.destination.destinationName
+        statusLabel.text = prediction.status.displayString
     }
-
 }

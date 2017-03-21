@@ -10,15 +10,10 @@ import UIKit
 import NotificationCenter
 import MetroKit
 
-class TodayViewController: UIViewController, NCWidgetProviding {
+class TodayViewController: UIViewController {
     
-    var predictions: [Prediction]?
-    var lastUpdated: Date?
-    let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "h:mm a"
-        return formatter
-    }()
+    public var dataSource = MetroDataSource()
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lastUpdatedLabel: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -27,10 +22,37 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
         
+        tableView.dataSource = dataSource
         tableView.register(UINib(nibName: "MetroCell", bundle: Bundle(for: MetroCell.self)), forCellReuseIdentifier: "trainCell")
         extensionContext?.widgetLargestAvailableDisplayMode = .expanded
     }
     
+    @IBAction func stationChanged(_ sender: UISegmentedControl) {
+        guard let station = Station(index: sender.selectedSegmentIndex) else { return }
+        
+        Fetcher.fetchLines(for: station) { (predictions) in
+            guard let predictions = predictions else { return }
+            if station == .clarendon {
+                self.dataSource.predictions = predictions.filter { $0.destination == .wiehle || $0.destination == .westFalls }
+            }
+            else {
+                self.dataSource.predictions = predictions.filter { $0.destination == .largo }
+            }
+            DispatchQueue.main.async {
+                self.updateTableView()
+            }
+            
+        }
+    }
+    
+    func updateTableView() {
+        self.dataSource.lastUpdated = Date()
+        self.tableView.reloadData()
+        self.lastUpdatedLabel.text = "Last Updated: \(self.dataSource.dateFormatter.string(from: self.dataSource.lastUpdated!))"
+    }
+}
+
+extension TodayViewController: NCWidgetProviding {
     func widgetPerformUpdate(completionHandler: @escaping (NCUpdateResult) -> Void) {
         // Perform any setup necessary in order to update the view.
         
@@ -44,7 +66,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 return
             }
             
-            self.predictions = predictions.filter { $0.destination == .wiehle || $0.destination == .westFalls }
+            self.dataSource.predictions = predictions.filter { $0.destination == .wiehle || $0.destination == .westFalls }
             DispatchQueue.main.async {
                 self.updateTableView()
                 completionHandler(.newData)
@@ -61,47 +83,5 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             let size = CGSize(width: tableView.contentSize.width, height: tableView.contentSize.height + 80.0)
             preferredContentSize = size
         }
-    }
-    @IBAction func stationChanged(_ sender: UISegmentedControl) {
-        guard let station = Station(index: sender.selectedSegmentIndex) else { return }
-        
-        Fetcher.fetchLines(for: station) { (predictions) in
-            guard let predictions = predictions else { return }
-            if station == .clarendon {
-                self.predictions = predictions.filter { $0.destination == .wiehle || $0.destination == .westFalls }
-            }
-            else {
-                self.predictions = predictions.filter { $0.destination == .largo }
-            }
-            DispatchQueue.main.async {
-                self.updateTableView()
-            }
-            
-        }
-    }
-    
-    func updateTableView() {
-        self.lastUpdated = Date()
-        self.tableView.reloadData()
-        self.lastUpdatedLabel.text = "Last Updated: \(self.dateFormatter.string(from: self.lastUpdated!))"
-    }
-    
-}
-
-extension TodayViewController: UITableViewDelegate, UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return predictions?.count ?? 0
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "trainCell", for: indexPath) as! MetroCell
-        if let prediction = predictions?[indexPath.row] {
-            cell.lineView.backgroundColor = prediction.line.lineColor()
-            cell.destinationLabel.text = prediction.destination.destinationName
-            cell.statusLabel.text = prediction.status.displayString()
-        }
-        return cell
-    }
+    }   
 }

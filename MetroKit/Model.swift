@@ -13,7 +13,8 @@ public enum Station: String {
     wiehle = "Wiehle",
     largo = "Largo",
     westFalls = "West Falls Church",
-    newCarrollton = "New Carrollton"
+    newCarrollton = "New Carrollton",
+    vienna = "Vienna/Fairfax-GMU"
     
     public var code: String {
         switch self {
@@ -22,6 +23,7 @@ public enum Station: String {
         case .largo: return "G05"
         case .westFalls: return "K06"
         case .newCarrollton: return "D13"
+        case .vienna: return "K08"
         }
     }
     public init?(index: Int) {
@@ -38,6 +40,7 @@ public enum Station: String {
         case "G05": self = .largo
         case "K06": self = .westFalls
         case "D13": self = .newCarrollton
+        case "K08": self = .vienna
         default: return nil
         }
     }
@@ -48,6 +51,7 @@ public enum Station: String {
         case .largo: return "Largo Town Center"
         case .westFalls: return "West Falls Church"
         case .newCarrollton: return "New Carrollton"
+        case .vienna: return "Vienna/Fairfax-GMU"
         }
     }
 }
@@ -55,7 +59,7 @@ public enum Station: String {
 public enum TrainLine: String {
     case orange = "OR", silver = "SV"
     
-    public func lineColor() -> UIColor {
+    public var lineColor: UIColor {
         switch self {
         case .orange: return UIColor.orange
         case .silver: return UIColor.lightGray
@@ -96,7 +100,7 @@ public enum Status {
         }
     }
     
-    public func displayString() -> String {
+    public var displayString: String {
         switch self {
         case .away(let minutes): return minutes == 1 ? "\(minutes) minute" : "\(minutes) minutes"
         case .arriving: return "ARRIVING"

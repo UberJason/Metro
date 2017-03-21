@@ -14,15 +14,16 @@
 		961C4F4C1E62256300474F1C /* MetroKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961C4F3D1E62247500474F1C /* MetroKit.framework */; };
 		961C4F4D1E62316500474F1C /* MetroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9642D7F81DAAF37D00176CD7 /* MetroCell.swift */; };
 		961C4F4E1E62316500474F1C /* MetroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9642D7FB1DAAF39000176CD7 /* MetroCell.xib */; };
+		9666533F1E80C0AC006A8821 /* MetroDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9666533E1E80C0AC006A8821 /* MetroDataSource.swift */; };
 		96E996B01DA9EABB00D48316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E996AF1DA9EABB00D48316 /* AppDelegate.swift */; };
-		96E996B21DA9EABB00D48316 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E996B11DA9EABB00D48316 /* ViewController.swift */; };
+		96E996B21DA9EABB00D48316 /* ClarendonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E996B11DA9EABB00D48316 /* ClarendonViewController.swift */; };
 		96E996B51DA9EABC00D48316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E996B31DA9EABB00D48316 /* Main.storyboard */; };
 		96E996B71DA9EABC00D48316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96E996B61DA9EABC00D48316 /* Assets.xcassets */; };
 		96E996BA1DA9EABC00D48316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E996B81DA9EABC00D48316 /* LaunchScreen.storyboard */; };
 		96E996C81DA9ED1E00D48316 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E996C71DA9ED1E00D48316 /* NotificationCenter.framework */; };
 		96E996CB1DA9ED1E00D48316 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E996CA1DA9ED1E00D48316 /* TodayViewController.swift */; };
 		96E996CE1DA9ED1E00D48316 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E996CC1DA9ED1E00D48316 /* MainInterface.storyboard */; };
-		96E996D21DA9ED1E00D48316 /* Clarendon.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 96E996C51DA9ED1E00D48316 /* Clarendon.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		96E996D21DA9ED1E00D48316 /* MetroWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 96E996C51DA9ED1E00D48316 /* MetroWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				96E996D21DA9ED1E00D48316 /* Clarendon.appex in Embed App Extensions */,
+				96E996D21DA9ED1E00D48316 /* MetroWidget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -74,14 +75,15 @@
 		961C4F4A1E62248200474F1C /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9642D7F81DAAF37D00176CD7 /* MetroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetroCell.swift; path = ../Clarendon/MetroCell.swift; sourceTree = "<group>"; };
 		9642D7FB1DAAF39000176CD7 /* MetroCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MetroCell.xib; path = ../Clarendon/MetroCell.xib; sourceTree = "<group>"; };
+		9666533E1E80C0AC006A8821 /* MetroDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetroDataSource.swift; sourceTree = "<group>"; };
 		96E996AC1DA9EABB00D48316 /* Metro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E996AF1DA9EABB00D48316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96E996B11DA9EABB00D48316 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		96E996B11DA9EABB00D48316 /* ClarendonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarendonViewController.swift; sourceTree = "<group>"; };
 		96E996B41DA9EABC00D48316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96E996B61DA9EABC00D48316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96E996B91DA9EABC00D48316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96E996BB1DA9EABC00D48316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96E996C51DA9ED1E00D48316 /* Clarendon.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Clarendon.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		96E996C51DA9ED1E00D48316 /* MetroWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MetroWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E996C71DA9ED1E00D48316 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		96E996CA1DA9ED1E00D48316 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		96E996CD1DA9ED1E00D48316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				961C4F401E62247500474F1C /* Info.plist */,
 				961C4F4A1E62248200474F1C /* Model.swift */,
 				9642D7F81DAAF37D00176CD7 /* MetroCell.swift */,
+				9666533E1E80C0AC006A8821 /* MetroDataSource.swift */,
 				9642D7FB1DAAF39000176CD7 /* MetroCell.xib */,
 			);
 			path = MetroKit;
@@ -143,7 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				96E996AC1DA9EABB00D48316 /* Metro.app */,
-				96E996C51DA9ED1E00D48316 /* Clarendon.appex */,
+				96E996C51DA9ED1E00D48316 /* MetroWidget.appex */,
 				961C4F3D1E62247500474F1C /* MetroKit.framework */,
 			);
 			name = Products;
@@ -153,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				96E996AF1DA9EABB00D48316 /* AppDelegate.swift */,
-				96E996B11DA9EABB00D48316 /* ViewController.swift */,
+				96E996B11DA9EABB00D48316 /* ClarendonViewController.swift */,
 				96E996B31DA9EABB00D48316 /* Main.storyboard */,
 				96E996B61DA9EABC00D48316 /* Assets.xcassets */,
 				96E996B81DA9EABC00D48316 /* LaunchScreen.storyboard */,
@@ -233,9 +236,9 @@
 			productReference = 96E996AC1DA9EABB00D48316 /* Metro.app */;
 			productType = "com.apple.product-type.application";
 		};
-		96E996C41DA9ED1E00D48316 /* Clarendon */ = {
+		96E996C41DA9ED1E00D48316 /* MetroWidget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 96E996D31DA9ED1E00D48316 /* Build configuration list for PBXNativeTarget "Clarendon" */;
+			buildConfigurationList = 96E996D31DA9ED1E00D48316 /* Build configuration list for PBXNativeTarget "MetroWidget" */;
 			buildPhases = (
 				96E996C11DA9ED1E00D48316 /* Sources */,
 				96E996C21DA9ED1E00D48316 /* Frameworks */,
@@ -245,9 +248,9 @@
 			);
 			dependencies = (
 			);
-			name = Clarendon;
+			name = MetroWidget;
 			productName = Clarendon;
-			productReference = 96E996C51DA9ED1E00D48316 /* Clarendon.appex */;
+			productReference = 96E996C51DA9ED1E00D48316 /* MetroWidget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -292,7 +295,7 @@
 			projectRoot = "";
 			targets = (
 				96E996AB1DA9EABB00D48316 /* Metro */,
-				96E996C41DA9ED1E00D48316 /* Clarendon */,
+				96E996C41DA9ED1E00D48316 /* MetroWidget */,
 				961C4F3C1E62247500474F1C /* MetroKit */,
 			);
 		};
@@ -333,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				961C4F4B1E62248200474F1C /* Model.swift in Sources */,
+				9666533F1E80C0AC006A8821 /* MetroDataSource.swift in Sources */,
 				961C4F4D1E62316500474F1C /* MetroCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,7 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96E996B21DA9EABB00D48316 /* ViewController.swift in Sources */,
+				96E996B21DA9EABB00D48316 /* ClarendonViewController.swift in Sources */,
 				96E996B01DA9EABB00D48316 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,7 +368,7 @@
 		};
 		96E996D11DA9ED1E00D48316 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 96E996C41DA9ED1E00D48316 /* Clarendon */;
+			target = 96E996C41DA9ED1E00D48316 /* MetroWidget */;
 			targetProxy = 96E996D01DA9ED1E00D48316 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -580,7 +584,7 @@
 				DEVELOPMENT_TEAM = 2GPQ8GE99T;
 				INFOPLIST_FILE = Clarendon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.JYJApps.Metro.Clarendon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JYJApps.Metro.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -594,7 +598,7 @@
 				DEVELOPMENT_TEAM = 2GPQ8GE99T;
 				INFOPLIST_FILE = Clarendon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.JYJApps.Metro.Clarendon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JYJApps.Metro.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -611,6 +615,7 @@
 				961C4F471E62247500474F1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96E996A71DA9EABB00D48316 /* Build configuration list for PBXProject "Metro" */ = {
 			isa = XCConfigurationList;
@@ -630,7 +635,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		96E996D31DA9ED1E00D48316 /* Build configuration list for PBXNativeTarget "Clarendon" */ = {
+		96E996D31DA9ED1E00D48316 /* Build configuration list for PBXNativeTarget "MetroWidget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96E996D41DA9ED1E00D48316 /* Debug */,
