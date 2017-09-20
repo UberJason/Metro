@@ -33,7 +33,7 @@ class TodayViewController: UIViewController {
         MetroFetcher.fetchLines(for: station) { (predictions) in
             guard let predictions = predictions else { return }
             if station == .clarendon {
-                self.dataSource.predictions = predictions.filter { $0.destination == .wiehle || $0.destination == .westFalls }
+                self.dataSource.predictions = predictions.filter { $0.destination == .wiehle || $0.destination == .westFalls || $0.destination == .vienna }
             }
             else {
                 self.dataSource.predictions = predictions.filter { $0.destination == .largo }
