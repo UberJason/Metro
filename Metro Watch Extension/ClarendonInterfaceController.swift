@@ -31,6 +31,11 @@ class ClarendonInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func refresh() {
+        // TODO: spinner
+        fetchLines()
+    }
+    
     func fetchLines() {
         MetroFetcher.fetchLines(for: .clarendon) { (predictions) in
             DispatchQueue.main.async {

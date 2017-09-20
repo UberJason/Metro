@@ -51,6 +51,15 @@
                             <edgeInsets key="margins" left="6" right="0.0" top="0.0" bottom="0.0"/>
                         </group>
                     </items>
+                    <menu key="menu" id="sgZ-UH-JGZ">
+                        <items>
+                            <menuItem title="Refresh" icon="repeat" id="FO5-nQ-W6u">
+                                <connections>
+                                    <action selector="refresh" destination="AgC-eL-Hgc" id="tjw-3a-i9b"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="lastUpdatedLabel" destination="jBu-Ah-Oko" id="q1X-wo-bLN"/>
                         <outlet property="table" destination="NfQ-dU-9wP" id="GR6-sQ-Jy4"/>
