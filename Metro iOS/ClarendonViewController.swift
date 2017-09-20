@@ -10,9 +10,9 @@ import UIKit
 import MetroKit
 
 class ClarendonViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
-
+    
     public var dataSource = MetroDataSource(withTitles: true)
     
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class ClarendonViewController: UIViewController {
         }()
         
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -37,16 +37,16 @@ class ClarendonViewController: UIViewController {
     
     @objc func refreshData() {
         MetroFetcher.fetchLines(for: .clarendon) { (predictions) in
-            self.tableView.refreshControl?.endRefreshing()
-            guard let predictions = predictions else {
-                let alert = UIAlertController(title: "Error", message: "Couldn't fetch lines for Clarendon.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-                return
-            }
-            
-            self.dataSource.predictions = predictions
             DispatchQueue.main.async {
+                self.tableView.refreshControl?.endRefreshing()
+                guard let predictions = predictions else {
+                    let alert = UIAlertController(title: "Error", message: "Couldn't fetch lines for Clarendon.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    return
+                }
+                
+                self.dataSource.predictions = predictions
                 self.updateTableView()
             }
         }
