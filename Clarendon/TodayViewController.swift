@@ -48,7 +48,8 @@ class TodayViewController: UIViewController {
     func updateTableView() {
         self.dataSource.lastUpdated = Date()
         self.tableView.reloadData()
-        self.lastUpdatedLabel.text = "Last Updated: \(self.dataSource.dateFormatter.string(from: self.dataSource.lastUpdated!))"
+        self.lastUpdatedLabel.text = self.dataSource.lastUpdateString
+
     }
 }
 

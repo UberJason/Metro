@@ -11,12 +11,19 @@ import UIKit
 public class MetroDataSource: NSObject, UITableViewDataSource {
     
     public var predictions: [Prediction]?
-    public var lastUpdated: Date?
-    public let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "h:mm a"
-        return formatter
-    }()
+    public var lastUpdateManager = LastUpdateManager()
+    public var lastUpdateString: String {
+        return lastUpdateManager.lastUpdateString
+    }
+    public var lastUpdated: Date? {
+        get {
+            return lastUpdateManager.lastUpdated
+        }
+        set {
+            lastUpdateManager.lastUpdated = newValue
+        }
+    }
+    
     public var hasTitles: Bool = false
     
     public init(withTitles: Bool = false) {
@@ -42,11 +49,6 @@ public class MetroDataSource: NSObject, UITableViewDataSource {
     }
     public func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         guard hasTitles else { return nil }
-        if let lastUpdated = lastUpdated {
-            return "Last Updated: \(dateFormatter.string(from: lastUpdated))"
-        }
-        else {
-            return "Last Updated: "
-        }
+        return lastUpdateManager.lastUpdateString
     }
 }

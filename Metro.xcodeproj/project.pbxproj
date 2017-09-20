@@ -28,6 +28,8 @@
 		96726E171F72E52C003A8BBC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C4F4A1E62248200474F1C /* Model.swift */; };
 		96CB617A1F72ED6F00B4ADC3 /* WiehleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB61791F72ED6F00B4ADC3 /* WiehleInterfaceController.swift */; };
 		96CB617C1F72F29F00B4ADC3 /* MetroTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB617B1F72F29F00B4ADC3 /* MetroTableRowController.swift */; };
+		96CB61811F72F8E600B4ADC3 /* LastUpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB61801F72F8E600B4ADC3 /* LastUpdateManager.swift */; };
+		96CB61821F72F8EA00B4ADC3 /* LastUpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB61801F72F8E600B4ADC3 /* LastUpdateManager.swift */; };
 		96E996B01DA9EABB00D48316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E996AF1DA9EABB00D48316 /* AppDelegate.swift */; };
 		96E996B21DA9EABB00D48316 /* ClarendonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E996B11DA9EABB00D48316 /* ClarendonViewController.swift */; };
 		96E996B51DA9EABC00D48316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E996B31DA9EABB00D48316 /* Main.storyboard */; };
@@ -158,6 +160,7 @@
 		96726E0D1F72E512003A8BBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96CB61791F72ED6F00B4ADC3 /* WiehleInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiehleInterfaceController.swift; sourceTree = "<group>"; };
 		96CB617B1F72F29F00B4ADC3 /* MetroTableRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroTableRowController.swift; sourceTree = "<group>"; };
+		96CB61801F72F8E600B4ADC3 /* LastUpdateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastUpdateManager.swift; sourceTree = "<group>"; };
 		96E996AC1DA9EABB00D48316 /* Metro iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metro iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E996AF1DA9EABB00D48316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96E996B11DA9EABB00D48316 /* ClarendonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarendonViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +225,7 @@
 				961C4F401E62247500474F1C /* Info.plist */,
 				961C4F4A1E62248200474F1C /* Model.swift */,
 				9666533E1E80C0AC006A8821 /* MetroDataSource.swift */,
+				96CB61801F72F8E600B4ADC3 /* LastUpdateManager.swift */,
 				9642D7F81DAAF37D00176CD7 /* MetroCell.swift */,
 				9642D7FB1DAAF39000176CD7 /* MetroCell.xib */,
 			);
@@ -578,6 +582,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96CB61811F72F8E600B4ADC3 /* LastUpdateManager.swift in Sources */,
 				961C4F4B1E62248200474F1C /* Model.swift in Sources */,
 				9666533F1E80C0AC006A8821 /* MetroDataSource.swift in Sources */,
 				961C4F4D1E62316500474F1C /* MetroCell.swift in Sources */,
@@ -599,6 +604,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96CB61821F72F8EA00B4ADC3 /* LastUpdateManager.swift in Sources */,
 				96726E171F72E52C003A8BBC /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
