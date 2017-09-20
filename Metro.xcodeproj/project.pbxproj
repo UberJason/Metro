@@ -18,15 +18,16 @@
 		96726DCB1F72E20C003A8BBC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96726DC91F72E20C003A8BBC /* Interface.storyboard */; };
 		96726DCD1F72E20C003A8BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96726DCC1F72E20C003A8BBC /* Assets.xcassets */; };
 		96726DD41F72E20D003A8BBC /* Metro Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 96726DD31F72E20D003A8BBC /* Metro Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		96726DD91F72E20D003A8BBC /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96726DD81F72E20D003A8BBC /* InterfaceController.swift */; };
+		96726DD91F72E20D003A8BBC /* ClarendonInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96726DD81F72E20D003A8BBC /* ClarendonInterfaceController.swift */; };
 		96726DDB1F72E20D003A8BBC /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96726DDA1F72E20D003A8BBC /* ExtensionDelegate.swift */; };
-		96726DDD1F72E20D003A8BBC /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96726DDC1F72E20D003A8BBC /* NotificationController.swift */; };
 		96726DDF1F72E20D003A8BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96726DDE1F72E20D003A8BBC /* Assets.xcassets */; };
 		96726DE41F72E20D003A8BBC /* Metro Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 96726DC71F72E20C003A8BBC /* Metro Watch.app */; };
 		96726E0E1F72E512003A8BBC /* MetroKitWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 96726E0C1F72E512003A8BBC /* MetroKitWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96726E111F72E512003A8BBC /* MetroKitWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96726E0A1F72E512003A8BBC /* MetroKitWatch.framework */; };
 		96726E121F72E512003A8BBC /* MetroKitWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 96726E0A1F72E512003A8BBC /* MetroKitWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		96726E171F72E52C003A8BBC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961C4F4A1E62248200474F1C /* Model.swift */; };
+		96CB617A1F72ED6F00B4ADC3 /* WiehleInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB61791F72ED6F00B4ADC3 /* WiehleInterfaceController.swift */; };
+		96CB617C1F72F29F00B4ADC3 /* MetroTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB617B1F72F29F00B4ADC3 /* MetroTableRowController.swift */; };
 		96E996B01DA9EABB00D48316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E996AF1DA9EABB00D48316 /* AppDelegate.swift */; };
 		96E996B21DA9EABB00D48316 /* ClarendonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E996B11DA9EABB00D48316 /* ClarendonViewController.swift */; };
 		96E996B51DA9EABC00D48316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E996B31DA9EABB00D48316 /* Main.storyboard */; };
@@ -147,15 +148,16 @@
 		96726DCC1F72E20C003A8BBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96726DCE1F72E20C003A8BBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96726DD31F72E20D003A8BBC /* Metro Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Metro Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		96726DD81F72E20D003A8BBC /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		96726DD81F72E20D003A8BBC /* ClarendonInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarendonInterfaceController.swift; sourceTree = "<group>"; };
 		96726DDA1F72E20D003A8BBC /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		96726DDC1F72E20D003A8BBC /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		96726DDE1F72E20D003A8BBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96726DE01F72E20D003A8BBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96726DE11F72E20D003A8BBC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		96726E0A1F72E512003A8BBC /* MetroKitWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MetroKitWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96726E0C1F72E512003A8BBC /* MetroKitWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MetroKitWatch.h; sourceTree = "<group>"; };
 		96726E0D1F72E512003A8BBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96CB61791F72ED6F00B4ADC3 /* WiehleInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiehleInterfaceController.swift; sourceTree = "<group>"; };
+		96CB617B1F72F29F00B4ADC3 /* MetroTableRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroTableRowController.swift; sourceTree = "<group>"; };
 		96E996AC1DA9EABB00D48316 /* Metro iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metro iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E996AF1DA9EABB00D48316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96E996B11DA9EABB00D48316 /* ClarendonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarendonViewController.swift; sourceTree = "<group>"; };
@@ -239,9 +241,10 @@
 		96726DD71F72E20D003A8BBC /* Metro Watch Extension */ = {
 			isa = PBXGroup;
 			children = (
-				96726DD81F72E20D003A8BBC /* InterfaceController.swift */,
+				96726DD81F72E20D003A8BBC /* ClarendonInterfaceController.swift */,
+				96CB61791F72ED6F00B4ADC3 /* WiehleInterfaceController.swift */,
+				96CB617B1F72F29F00B4ADC3 /* MetroTableRowController.swift */,
 				96726DDA1F72E20D003A8BBC /* ExtensionDelegate.swift */,
-				96726DDC1F72E20D003A8BBC /* NotificationController.swift */,
 				96726DDE1F72E20D003A8BBC /* Assets.xcassets */,
 				96726DE01F72E20D003A8BBC /* Info.plist */,
 				96726DE11F72E20D003A8BBC /* PushNotificationPayload.apns */,
@@ -585,9 +588,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96726DDD1F72E20D003A8BBC /* NotificationController.swift in Sources */,
+				96CB617A1F72ED6F00B4ADC3 /* WiehleInterfaceController.swift in Sources */,
 				96726DDB1F72E20D003A8BBC /* ExtensionDelegate.swift in Sources */,
-				96726DD91F72E20D003A8BBC /* InterfaceController.swift in Sources */,
+				96726DD91F72E20D003A8BBC /* ClarendonInterfaceController.swift in Sources */,
+				96CB617C1F72F29F00B4ADC3 /* MetroTableRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

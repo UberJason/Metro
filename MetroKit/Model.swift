@@ -55,6 +55,13 @@ public enum TrainLine: String {
         case .silver: return UIColor.lightGray
         }
     }
+    
+    public var transparentLineColor: UIColor {
+        switch self {
+        case .orange: return UIColor(red: 1.0, green: 0.5, blue: 0.0, alpha: 0.3)
+        case .silver: return UIColor(red: 0.667, green: 0.667, blue: 0.667, alpha: 0.3)
+        }
+    }
 }
 //
 //public enum Destination: String {
