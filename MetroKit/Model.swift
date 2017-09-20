@@ -131,7 +131,7 @@ public class Prediction {
     }
 }
 
-public class Fetcher {
+public class MetroFetcher {
     public static func fetchLines(for station: Station, completion: @escaping (_ predictions: [Prediction]?) -> ()) {
         let code = station.code
         let url = URL(string: "https://api.wmata.com/StationPrediction.svc/json/GetPrediction/\(code)")!

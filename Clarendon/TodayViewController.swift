@@ -30,7 +30,7 @@ class TodayViewController: UIViewController {
     @IBAction func stationChanged(_ sender: UISegmentedControl) {
         guard let station = Station(index: sender.selectedSegmentIndex) else { return }
         
-        Fetcher.fetchLines(for: station) { (predictions) in
+        MetroFetcher.fetchLines(for: station) { (predictions) in
             guard let predictions = predictions else { return }
             if station == .clarendon {
                 self.dataSource.predictions = predictions.filter { $0.destination == .wiehle || $0.destination == .westFalls }
@@ -54,7 +54,7 @@ class TodayViewController: UIViewController {
 
 extension TodayViewController: NCWidgetProviding {
     func widgetPerformUpdate(completionHandler: @escaping (NCUpdateResult) -> Void) {
-        Fetcher.fetchLines(for: .clarendon) { (predictions) in
+        MetroFetcher.fetchLines(for: .clarendon) { (predictions) in
             guard let predictions = predictions else {
                 completionHandler(.failed)
                 return

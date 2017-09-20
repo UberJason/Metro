@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0900"
    wasCreatedForAppExtension = "YES"
    version = "2.0">
    <BuildAction
@@ -30,8 +30,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "96E996AB1DA9EABB00D48316"
-               BuildableName = "Metro.app"
-               BlueprintName = "Metro"
+               BuildableName = "Metro iOS.app"
+               BlueprintName = "Metro iOS"
                ReferencedContainer = "container:Metro.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -41,6 +41,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -60,6 +61,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = ""
       selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -109,8 +111,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "96E996AB1DA9EABB00D48316"
-            BuildableName = "Metro.app"
-            BlueprintName = "Metro"
+            BuildableName = "Metro iOS.app"
+            BlueprintName = "Metro iOS"
             ReferencedContainer = "container:Metro.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
