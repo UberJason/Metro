@@ -14,6 +14,7 @@
 		961C4F4C1E62256300474F1C /* MetroKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961C4F3D1E62247500474F1C /* MetroKit.framework */; };
 		961C4F4D1E62316500474F1C /* MetroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9642D7F81DAAF37D00176CD7 /* MetroCell.swift */; };
 		961C4F4E1E62316500474F1C /* MetroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9642D7FB1DAAF39000176CD7 /* MetroCell.xib */; };
+		965667521F7318EC00163203 /* SpinnerScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 965667511F7318EC00163203 /* SpinnerScene.sks */; };
 		9666533F1E80C0AC006A8821 /* MetroDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9666533E1E80C0AC006A8821 /* MetroDataSource.swift */; };
 		96726DCB1F72E20C003A8BBC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96726DC91F72E20C003A8BBC /* Interface.storyboard */; };
 		96726DCD1F72E20C003A8BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96726DCC1F72E20C003A8BBC /* Assets.xcassets */; };
@@ -144,6 +145,7 @@
 		961C4F4A1E62248200474F1C /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9642D7F81DAAF37D00176CD7 /* MetroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MetroCell.swift; path = ../Clarendon/MetroCell.swift; sourceTree = "<group>"; };
 		9642D7FB1DAAF39000176CD7 /* MetroCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MetroCell.xib; path = ../Clarendon/MetroCell.xib; sourceTree = "<group>"; };
+		965667511F7318EC00163203 /* SpinnerScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SpinnerScene.sks; sourceTree = "<group>"; };
 		9666533E1E80C0AC006A8821 /* MetroDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetroDataSource.swift; sourceTree = "<group>"; };
 		96726DC71F72E20C003A8BBC /* Metro Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metro Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96726DCA1F72E20C003A8BBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				96726DDE1F72E20D003A8BBC /* Assets.xcassets */,
 				96726DE01F72E20D003A8BBC /* Info.plist */,
 				96726DE11F72E20D003A8BBC /* PushNotificationPayload.apns */,
+				965667511F7318EC00163203 /* SpinnerScene.sks */,
 			);
 			path = "Metro Watch Extension";
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965667521F7318EC00163203 /* SpinnerScene.sks in Resources */,
 				96726DDF1F72E20D003A8BBC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
