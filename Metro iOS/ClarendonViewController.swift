@@ -35,7 +35,7 @@ class ClarendonViewController: UIViewController {
         refreshData()
     }
     
-    func refreshData() {
+    @objc func refreshData() {
         MetroFetcher.fetchLines(for: .clarendon) { (predictions) in
             self.tableView.refreshControl?.endRefreshing()
             guard let predictions = predictions else {
