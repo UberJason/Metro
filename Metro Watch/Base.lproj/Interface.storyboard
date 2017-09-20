@@ -53,7 +53,7 @@
                     </items>
                     <menu key="menu" id="sgZ-UH-JGZ">
                         <items>
-                            <menuItem title="Refresh" icon="repeat" id="FO5-nQ-W6u">
+                            <menuItem title="Refresh" image="Reload" id="FO5-nQ-W6u">
                                 <connections>
                                     <action selector="refresh" destination="AgC-eL-Hgc" id="tjw-3a-i9b"/>
                                 </connections>
