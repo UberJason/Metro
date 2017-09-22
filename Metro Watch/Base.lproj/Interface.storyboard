@@ -28,11 +28,11 @@
                                                     <group width="1" alignment="left" layout="vertical" spacing="0.0" id="9Ln-iV-8rf">
                                                         <items>
                                                             <label alignment="left" text="Wiehle-Reston East" id="tt8-pR-FG6">
-                                                                <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                                                <fontDescription key="font" type="system" pointSize="15"/>
                                                             </label>
                                                             <label alignment="left" text="4 minutes" id="Zcp-uF-LEP">
-                                                                <color key="textColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <fontDescription key="font" type="system" pointSize="14"/>
+                                                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="font" type="system" pointSize="13"/>
                                                             </label>
                                                         </items>
                                                     </group>
@@ -84,13 +84,7 @@
         <scene sceneID="38u-N5-nvG">
             <objects>
                 <controller id="lrF-ZV-7Df" customClass="WiehleInterfaceController" customModule="Metro_Watch_Extension">
-                    <items>
-                        <spriteKitScene alignment="left" scene="SpinnerScene.sks" id="vUC-1h-eNY"/>
-                    </items>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <connections>
-                        <outlet property="spinnerScene" destination="vUC-1h-eNY" id="pRz-hy-10W"/>
-                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="502" y="345"/>
