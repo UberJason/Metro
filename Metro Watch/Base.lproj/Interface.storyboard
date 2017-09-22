@@ -13,42 +13,51 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="ClarendonInterfaceController" customModule="Metro_Watch" customModuleProvider="target">
                     <items>
-                        <table alignment="left" id="NfQ-dU-9wP">
+                        <group width="1" height="1" alignment="left" hidden="YES" id="d7e-FU-kai" userLabel="LoadingGroup">
                             <items>
-                                <tableRow identifier="metroRow" selectable="NO" id="78e-kw-dGs" customClass="MetroTableRowController" customModule="Metro_Watch" customModuleProvider="target">
-                                    <group key="rootItem" width="1" alignment="left" id="tnf-4u-RKm">
-                                        <items>
-                                            <group width="1" alignment="left" layout="vertical" spacing="0.0" id="9Ln-iV-8rf">
+                                <label alignment="center" verticalAlignment="center" text="Loading..." id="5ah-FQ-mBy" userLabel="LoadingLabel"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="gfS-nd-lhJ" userLabel="DataGroup">
+                            <items>
+                                <table alignment="left" id="NfQ-dU-9wP">
+                                    <items>
+                                        <tableRow identifier="metroRow" selectable="NO" id="78e-kw-dGs" customClass="MetroTableRowController" customModule="Metro_Watch" customModuleProvider="target">
+                                            <group key="rootItem" width="1" alignment="left" id="tnf-4u-RKm">
                                                 <items>
-                                                    <label alignment="left" text="Wiehle-Reston East" id="tt8-pR-FG6">
-                                                        <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
-                                                    </label>
-                                                    <label alignment="left" text="4 minutes" id="Zcp-uF-LEP">
-                                                        <color key="textColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="font" type="system" pointSize="14"/>
-                                                    </label>
+                                                    <group width="1" alignment="left" layout="vertical" spacing="0.0" id="9Ln-iV-8rf">
+                                                        <items>
+                                                            <label alignment="left" text="Wiehle-Reston East" id="tt8-pR-FG6">
+                                                                <fontDescription key="font" type="system" weight="semibold" pointSize="16"/>
+                                                            </label>
+                                                            <label alignment="left" text="4 minutes" id="Zcp-uF-LEP">
+                                                                <color key="textColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="font" type="system" pointSize="14"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
                                                 </items>
                                             </group>
-                                        </items>
-                                    </group>
-                                    <connections>
-                                        <outlet property="destinationLabel" destination="tt8-pR-FG6" id="uAV-6e-4CW"/>
-                                        <outlet property="lineView" destination="tnf-4u-RKm" id="tWd-0F-7ZU"/>
-                                        <outlet property="statusLabel" destination="Zcp-uF-LEP" id="Fub-t8-ICO"/>
-                                    </connections>
-                                </tableRow>
+                                            <connections>
+                                                <outlet property="destinationLabel" destination="tt8-pR-FG6" id="uAV-6e-4CW"/>
+                                                <outlet property="lineView" destination="tnf-4u-RKm" id="tWd-0F-7ZU"/>
+                                                <outlet property="statusLabel" destination="Zcp-uF-LEP" id="Fub-t8-ICO"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                                <group width="1" height="2" alignment="left" id="DLQ-IK-Fam">
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </group>
+                                <group width="1" alignment="left" id="NGe-UD-Q6e">
+                                    <items>
+                                        <label alignment="left" text="Updated:" id="jBu-Ah-Oko">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                    </items>
+                                    <edgeInsets key="margins" left="6" right="0.0" top="0.0" bottom="0.0"/>
+                                </group>
                             </items>
-                        </table>
-                        <group width="1" height="2" alignment="left" id="DLQ-IK-Fam">
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        </group>
-                        <group width="1" alignment="left" id="NGe-UD-Q6e">
-                            <items>
-                                <label alignment="left" text="Updated:" id="jBu-Ah-Oko">
-                                    <fontDescription key="font" type="system" pointSize="14"/>
-                                </label>
-                            </items>
-                            <edgeInsets key="margins" left="6" right="0.0" top="0.0" bottom="0.0"/>
                         </group>
                     </items>
                     <menu key="menu" id="sgZ-UH-JGZ">
@@ -61,7 +70,9 @@
                         </items>
                     </menu>
                     <connections>
+                        <outlet property="dataContainerGroup" destination="gfS-nd-lhJ" id="lkc-2O-KdD"/>
                         <outlet property="lastUpdatedLabel" destination="jBu-Ah-Oko" id="q1X-wo-bLN"/>
+                        <outlet property="loadingContainerGroup" destination="d7e-FU-kai" id="6CR-6S-yh8"/>
                         <outlet property="table" destination="NfQ-dU-9wP" id="GR6-sQ-Jy4"/>
                         <segue destination="lrF-ZV-7Df" kind="relationship" relationship="nextPage" id="nZP-zw-pFw"/>
                     </connections>

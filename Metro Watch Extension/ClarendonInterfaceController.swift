@@ -12,6 +12,9 @@ import MetroKitWatch
 
 class ClarendonInterfaceController: WKInterfaceController {
 
+    @IBOutlet var loadingContainerGroup: WKInterfaceGroup!
+    @IBOutlet var dataContainerGroup: WKInterfaceGroup!
+    
     @IBOutlet var table: WKInterfaceTable!
     @IBOutlet var lastUpdatedLabel: WKInterfaceLabel!
     
@@ -20,7 +23,7 @@ class ClarendonInterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        fetchLines()
+        refresh()
     }
     
     override func willActivate() {
@@ -33,6 +36,9 @@ class ClarendonInterfaceController: WKInterfaceController {
 
     @IBAction func refresh() {
         // TODO: spinner
+        dataContainerGroup.setHidden(true)
+        loadingContainerGroup.setHidden(false)
+        
         fetchLines()
     }
     
@@ -47,6 +53,9 @@ class ClarendonInterfaceController: WKInterfaceController {
                 self.predictions = predictions/*.filter { $0.destination == .wiehle || $0.destination == .westFalls }*/
                 self.lastUpdateManager.lastUpdated = Date()
                 self.reloadInterfaceTable()
+                
+                self.dataContainerGroup.setHidden(false)
+                self.loadingContainerGroup.setHidden(true)
             }
         }
     }
