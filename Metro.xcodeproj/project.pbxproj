@@ -31,6 +31,7 @@
 		96CB617C1F72F29F00B4ADC3 /* MetroTableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB617B1F72F29F00B4ADC3 /* MetroTableRowController.swift */; };
 		96CB61811F72F8E600B4ADC3 /* LastUpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB61801F72F8E600B4ADC3 /* LastUpdateManager.swift */; };
 		96CB61821F72F8EA00B4ADC3 /* LastUpdateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB61801F72F8E600B4ADC3 /* LastUpdateManager.swift */; };
+		96E6AB851F75C61C00C193D0 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E6AB841F75C61B00C193D0 /* ComplicationController.swift */; };
 		96E996B01DA9EABB00D48316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E996AF1DA9EABB00D48316 /* AppDelegate.swift */; };
 		96E996B21DA9EABB00D48316 /* ClarendonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E996B11DA9EABB00D48316 /* ClarendonViewController.swift */; };
 		96E996B51DA9EABC00D48316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E996B31DA9EABB00D48316 /* Main.storyboard */; };
@@ -163,6 +164,7 @@
 		96CB61791F72ED6F00B4ADC3 /* WiehleInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiehleInterfaceController.swift; sourceTree = "<group>"; };
 		96CB617B1F72F29F00B4ADC3 /* MetroTableRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroTableRowController.swift; sourceTree = "<group>"; };
 		96CB61801F72F8E600B4ADC3 /* LastUpdateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastUpdateManager.swift; sourceTree = "<group>"; };
+		96E6AB841F75C61B00C193D0 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		96E996AC1DA9EABB00D48316 /* Metro iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Metro iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E996AF1DA9EABB00D48316 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96E996B11DA9EABB00D48316 /* ClarendonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClarendonViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				96726DD81F72E20D003A8BBC /* ClarendonInterfaceController.swift */,
 				96CB61791F72ED6F00B4ADC3 /* WiehleInterfaceController.swift */,
 				96CB617B1F72F29F00B4ADC3 /* MetroTableRowController.swift */,
+				96E6AB841F75C61B00C193D0 /* ComplicationController.swift */,
 				96726DDA1F72E20D003A8BBC /* ExtensionDelegate.swift */,
 				96726DDE1F72E20D003A8BBC /* Assets.xcassets */,
 				96726DE01F72E20D003A8BBC /* Info.plist */,
@@ -599,6 +602,7 @@
 			files = (
 				96CB617A1F72ED6F00B4ADC3 /* WiehleInterfaceController.swift in Sources */,
 				96726DDB1F72E20D003A8BBC /* ExtensionDelegate.swift in Sources */,
+				96E6AB851F75C61C00C193D0 /* ComplicationController.swift in Sources */,
 				96726DD91F72E20D003A8BBC /* ClarendonInterfaceController.swift in Sources */,
 				96CB617C1F72F29F00B4ADC3 /* MetroTableRowController.swift in Sources */,
 			);

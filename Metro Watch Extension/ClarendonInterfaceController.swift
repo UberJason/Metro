@@ -23,11 +23,11 @@ class ClarendonInterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        refresh()
     }
     
     override func willActivate() {
         super.willActivate()
+        refresh()
     }
     
     override func didDeactivate() {
