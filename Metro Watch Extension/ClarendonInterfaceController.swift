@@ -27,11 +27,13 @@ class ClarendonInterfaceController: WKInterfaceController {
     
     override func willActivate() {
         super.willActivate()
+        WKExtension.shared().isAutorotating = true
         refresh()
     }
     
     override func didDeactivate() {
         super.didDeactivate()
+        WKExtension.shared().isAutorotating = false
     }
 
     @IBAction func refresh() {
